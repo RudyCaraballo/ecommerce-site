@@ -1,14 +1,8 @@
-import Categories from './components/categories/categories'
-// import './App.css';
+import HomePage from "./routes/homepage/homepage.jsx";
+
 
 function App() {
-  return (
-    <div className="page-container">
-    
-      <Categories />
-
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;

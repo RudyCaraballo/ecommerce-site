@@ -1,10 +1,12 @@
-
-import './App.css';
+import Category from './components/categories/category'
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
+    <div className="page-container">
+    
+      <Category />
+
     </div>
   );
 }

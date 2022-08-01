@@ -1,11 +1,11 @@
-import Category from './components/categories/category'
+import Categories from './components/categories/categories'
 // import './App.css';
 
 function App() {
   return (
     <div className="page-container">
     
-      <Category />
+      <Categories />
 
     </div>
   );

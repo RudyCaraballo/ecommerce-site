@@ -1,8 +1,7 @@
+import './category.scss'
 
 const Catagory = (categoryObj) => {
-    console.log(categoryObj);
-    const {imgUrl, id, title } = categoryObj.obj
-    console.log(title);
+  const { imgUrl, id, title } = categoryObj.obj;
 
   return (
     <div key={id} className="category-container">

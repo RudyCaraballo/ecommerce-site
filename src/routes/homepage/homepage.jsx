@@ -1,6 +1,6 @@
 import Categories from "../../components/categories/categories.jsx";
 
-const HomePage = () => {
+export default function HomePage() {
 
   return(
     <div className="page-container">
@@ -10,4 +10,3 @@ const HomePage = () => {
 
 };
 
-export default HomePage;

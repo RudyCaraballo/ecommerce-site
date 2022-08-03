@@ -3,7 +3,11 @@ import {Route , Routes} from "react-router-dom";
 
 
 function App() {
-  return <HomePage />;
+  return(
+  <Routes>
+  <Route path="/" element={<HomePage />} />
+  </Routes>
+  )
 }
 
 export default App;

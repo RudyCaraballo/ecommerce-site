@@ -1,7 +1,7 @@
 import "./categories.scss";
 import Catagory from "../catagory-item/catagory";
 
-const Categories = () => {
+export default function Categories() {
   const categories = [
     {
       id: 1,
@@ -44,4 +44,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+

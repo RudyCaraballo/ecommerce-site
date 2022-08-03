@@ -1,6 +1,6 @@
 import './category.scss'
 
-const Catagory = (categoryObj) => {
+export default function Catagory(categoryObj) {
   const { imgUrl, id, title } = categoryObj.obj;
 
   return (
@@ -17,4 +17,4 @@ const Catagory = (categoryObj) => {
   );
 };
 
-export default Catagory;
+

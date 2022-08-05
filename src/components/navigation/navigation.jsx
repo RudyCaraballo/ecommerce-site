@@ -6,13 +6,12 @@ import './navigation.scss'
 export default function Navigation() {
     return(
         <Fragment>
-            <div>
+            <div className="navigation">
                 <Link to="/" className="logo-container">
                     <Icon/>
                 </Link>
                 <div className="links-container">
                     <Link to="/shop">Shop</Link>
-                    <Link to="/">Home</Link>
                 </div>
             </div>
             <Outlet />

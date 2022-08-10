@@ -36,7 +36,7 @@ export default function SignUpForm() {
           setFormFeilds(defaultFormFields);
 
       } catch(error) {
-        console.log(error);
+        console.log(error.code) 
       }
     } else {
       alert("Passwords don't match");
@@ -72,6 +72,7 @@ export default function SignUpForm() {
           name="password"
           onChange={handleChange}
           value={password}
+          minlength="5"
           required
         />
 
@@ -81,6 +82,7 @@ export default function SignUpForm() {
           name="confirmPassword"
           onChange={handleChange}
           value={confirmPassword}
+          minlength="5"
           required
         />
 

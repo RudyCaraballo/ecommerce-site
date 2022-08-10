@@ -39,6 +39,7 @@ export const createUserDoc = async (userAuth) => {
   const userDocument = doc(db, "users", userAuth.uid);
   const userData = await getDoc(userDocument);
 
+
   if (!userData.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();

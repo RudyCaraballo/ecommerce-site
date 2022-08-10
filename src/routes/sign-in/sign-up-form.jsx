@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createUserAuthWithEmailAndPassword, createUserDoc} from "../../util/firebase";
+import { updateProfile } from "firebase/auth";
 
 const defaultFormFields = {
   username: "",
@@ -22,6 +23,7 @@ export default function SignUpForm() {
         if (password === confirmPassword) {
             //TODO needs error handling. Firebase checks weak passwords and emails already in use by other accounts
             const {user} = await createUserAuthWithEmailAndPassword(email, password);
+            await updateProfile(user, {displayName: username});
             const returnValue = await createUserDoc(user);
             console.log(returnValue);
         } else {

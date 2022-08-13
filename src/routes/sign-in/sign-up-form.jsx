@@ -46,7 +46,7 @@ export default function SignUpForm() {
   console.log(formFields);
   return (
     <div>
-      <h3>Sign up with your email and password</h3>
+      <h3>I Do Not Have An Account</h3>
       <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input
@@ -72,7 +72,7 @@ export default function SignUpForm() {
           name="password"
           onChange={handleChange}
           value={password}
-          minlength="5"
+          minLength="5"
           required
         />
 
@@ -82,7 +82,7 @@ export default function SignUpForm() {
           name="confirmPassword"
           onChange={handleChange}
           value={confirmPassword}
-          minlength="5"
+          minLength="5"
           required
         />
 

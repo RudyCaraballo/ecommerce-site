@@ -6,6 +6,7 @@ export default function SignInForm() {
       <h1>I Already Have An Account</h1>
       <p>Sign in with google</p>
       <GoogleSignInButton />
+      <button>Sign in with email</button>
     </div>
   );
 }

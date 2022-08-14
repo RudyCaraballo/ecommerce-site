@@ -4,6 +4,7 @@ import {
   createUserDoc,
 } from "../../util/firebase";
 import { updateProfile } from "firebase/auth";
+import FormInput from "../../form-input/form-input-component";
 
 const defaultFormFields = {
   username: "",
@@ -48,8 +49,9 @@ export default function SignUpForm() {
     <div>
       <h3>I Do Not Have An Account</h3>
       <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input
+
+        <FormInput
+          label="Username"
           type="text"
           name="username"
           onChange={handleChange}
@@ -57,8 +59,9 @@ export default function SignUpForm() {
           required
         />
 
-        <label>Email</label>
-        <input
+        
+        <FormInput
+          label="Email"
           type="email"
           name="email"
           onChange={handleChange}
@@ -66,8 +69,9 @@ export default function SignUpForm() {
           required
         />
 
-        <label>Password</label>
-        <input
+        
+        <FormInput
+          label="Password"
           type="password"
           name="password"
           onChange={handleChange}
@@ -76,8 +80,9 @@ export default function SignUpForm() {
           required
         />
 
-        <label>Confirm Password</label>
-        <input
+        
+        <FormInput
+          label="Confirm Password"
           type="password"
           name="confirmPassword"
           onChange={handleChange}

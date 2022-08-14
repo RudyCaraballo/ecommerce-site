@@ -1,5 +1,5 @@
-import GoogleSignInButton from "../../components/buttons/google-btn"
-import SignUpForm from "./sign-up-form"
+import SignUpForm from "../../components/sign-up-form/sign-up-form"
+import SignInForm from "../../components/sign-in-form/sign-in-form"
 
 export default function SignIn(){
 
@@ -8,7 +8,7 @@ export default function SignIn(){
     <div>
         <h1>This is the sign in page</h1>
         <SignUpForm /> 
-        <GoogleSignInButton />
+        <SignInForm />
     </div>
     )
 

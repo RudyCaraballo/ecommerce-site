@@ -5,7 +5,9 @@ import {
 } from "../../util/firebase";
 import { updateProfile } from "firebase/auth";
 import FormInput from "../../form-input/form-input-component";
+import Button from "../buttons/button";
 import './sign-up-form.scss';
+
 
 const defaultFormFields = {
   username: "",
@@ -93,7 +95,7 @@ export default function SignUpForm() {
           required
         />
 
-        <button type="submit">Sign up</button>
+        <Button type="submit">Sign up</Button>
       </form>
     </div>
   );

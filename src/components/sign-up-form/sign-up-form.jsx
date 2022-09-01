@@ -5,6 +5,7 @@ import {
 } from "../../util/firebase";
 import { updateProfile } from "firebase/auth";
 import FormInput from "../../form-input/form-input-component";
+import './sign-up-form.scss';
 
 const defaultFormFields = {
   username: "",
@@ -46,8 +47,9 @@ export default function SignUpForm() {
 
   console.log(formFields);
   return (
-    <div>
-      <h3>I Do Not Have An Account</h3>
+    <div className="sign-up-container">
+      <h2>Don't have an account?</h2>
+      <span>Sign up with your email and password.</span>
       <form onSubmit={handleSubmit}>
 
         <FormInput

@@ -90,7 +90,7 @@ export default function SignUpForm() {
           type="password"
           name="confirmPassword"
           onChange={handleChange}
-          value={confirmPassword}
+          value={confirmPassword} 
           minLength="5"
           required
         />

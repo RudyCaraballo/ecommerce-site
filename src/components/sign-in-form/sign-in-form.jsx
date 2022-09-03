@@ -2,6 +2,7 @@
 import { useState } from "react";
 import FormInput from "../../form-input/form-input-component";
 import Button from "../buttons/button";
+import GoogleSignInButton from "../buttons/google-btn";
 
 export default function SignInForm() {
 
@@ -22,7 +23,7 @@ export default function SignInForm() {
   return (
     <div>
     <h2>I already have an account</h2>
-    <span>Sign in wiht your email and password.</span>
+    <span>Sign in with your email and password.</span>
       <form>
         <FormInput
         label="Username"
@@ -41,7 +42,7 @@ export default function SignInForm() {
         required
       />
       <Button type="submit">Sign In</Button>
-      <Button buttonType="google" type="submit">Sign In With Google</Button>
+      <GoogleSignInButton />
 
       </form>
 

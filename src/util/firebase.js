@@ -4,8 +4,9 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword 
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc} from "firebase/firestore";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,6 +30,8 @@ provider.setCustomParameters({
 });
 
 export const auth = getAuth();
+
+//AUTHENTICATION USED GOOGLE AUTHENTICATION
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
@@ -38,7 +41,6 @@ export const db = getFirestore();
 export const createUserDoc = async (userAuth) => {
   const userDocument = doc(db, "users", userAuth.uid);
   const userData = await getDoc(userDocument);
-
 
   if (!userData.exists()) {
     const { displayName, email } = userAuth;
@@ -58,10 +60,25 @@ export const createUserDoc = async (userAuth) => {
   return userDocument;
 };
 
+//CREATING A USER WITH EMAIL AND PASSWORD
 export const createUserAuthWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password);
 };
+
+//AUTHENTICATION USEING USEDNAME AND PASSWORD
+export const signInWithEmailAndPasswordFunction = async (auth, email, password) => {
+
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password)
+    console.log("successfully signed in");
+    return userCredential
+
+  } catch (err) {
+    console.log(err);
+    return
+  }
+}
 
 

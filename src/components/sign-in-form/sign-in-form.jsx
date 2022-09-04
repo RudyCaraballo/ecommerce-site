@@ -26,7 +26,10 @@ export default function SignInForm() {
     event.preventDefault()
     const {user} = await signInWithEmailAndPasswordFunction(auth, email, password)
     console.log(user);
+    setFormFeilds(defaultFormFeilds)
+
   }
+  
   // console.log(formFeilds);
   return (
     <div>
@@ -57,17 +60,4 @@ export default function SignInForm() {
     </div>
   ) 
 
-  // const handleChange = async() => {
-  //   console.log("You are attempting to sign in")
-  // }
-
-  // return (
-  //   <div className="sign-in-container">
-  //     <h1>I Already Have An Account</h1>
-  //     <form onSubmit={handleChange}>
-  //     </form>
-  //     <button>Sign in with Google</button>
-  //     <button>Sign in with email</button>
-  //   </div>
-  // );
 }

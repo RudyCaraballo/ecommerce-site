@@ -12,7 +12,7 @@ export default function Navigation() {
                 </Link>
                 <div className="links-container">
                     <Link to="/shop">Shop</Link>
-                    <Link to="/sign-in">Sign in</Link>
+                    <Link to="/auth">Sign in</Link>
                 </div>
             </div>
             <Outlet />

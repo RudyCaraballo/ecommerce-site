@@ -1,7 +1,7 @@
 import SignUpForm from "../../components/sign-up-form/sign-up-form"
 import SignInForm from "../../components/sign-in-form/sign-in-form"
 
-export default function SignIn(){
+export default function Authentication(){
 
     return (
     <div>

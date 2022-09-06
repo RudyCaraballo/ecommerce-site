@@ -1,11 +1,10 @@
 import SignUpForm from "../../components/sign-up-form/sign-up-form"
 import SignInForm from "../../components/sign-in-form/sign-in-form"
+import './authentication.scss'
 
 export default function Authentication(){
-
     return (
-    <div>
-        <h1>This is the sign in page</h1>
+    <div className="authentication-container">
         <SignUpForm /> 
         <SignInForm />
     </div>

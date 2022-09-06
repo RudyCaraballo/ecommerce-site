@@ -10,6 +10,6 @@ export default function GoogleSignInButton() {
     }
 
     return (
-        <Button buttonType="google" onClick={signIn}>Sign in with Google</Button>
+        <Button type='button' buttonType="google" onClick={signIn}>Sign in with Google</Button>
     )
 }

@@ -1,10 +1,9 @@
-// import GoogleSignInButton from "../buttons/google-btn";
 import { useState } from "react";
 import FormInput from "../../form-input/form-input-component";
 import Button from "../buttons/button";
-import GoogleSignInButton from "../buttons/google-btn";
+// import GoogleSignInButton from "../buttons/google-btn";
 import './sign-in-form.scss'
-import { signInWithEmailAndPasswordFunction } from "../../util/firebase";
+import { signInWithEmailAndPasswordFunction, signInWithGooglePopup, createUserDoc } from "../../util/firebase";
 import {auth}  from "../../util/firebase";
 
 export default function SignInForm() {
@@ -46,6 +45,11 @@ export default function SignInForm() {
     }
 
   }
+  const signInWithGoogleButton = async() => {
+    const {user} = await signInWithGooglePopup()
+    const userDoc = await createUserDoc(user)
+    console.log(userDoc);
+}
   
   // console.log(formFeilds);
   //TODO: google sign in button isn't seperated from the sign in button in the stylesheet for some reason...
@@ -73,7 +77,7 @@ export default function SignInForm() {
       <div className="buttons-container">
       <Button type="submit">Sign In</Button>
       {/* google button is type 'button' as by default it is type submit and will trigger the sign in action by default */}
-      <GoogleSignInButton />
+      <Button type='button' buttonType="google" onClick={signInWithGoogleButton}>Sign</Button>
       </div>
 
       </form>

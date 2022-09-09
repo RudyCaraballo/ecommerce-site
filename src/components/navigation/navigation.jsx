@@ -10,9 +10,9 @@ export default function Navigation() {
                 <Link to="/" className="logo-container">
                     <Icon/>
                 </Link>
-                <div className="links-container">
-                    <Link to="/shop">Shop</Link>
-                    <Link to="/auth">Sign in</Link>
+                <div className="nav-links-container">
+                    <Link className="nav-link" to="/shop">Shop</Link>
+                    <Link className="nav-link"  to="/auth">Sign In</Link>
                 </div>
             </div>
             <Outlet />
